@@ -1,14 +1,22 @@
 
-alert("Binvenido a nuestra tienda online,para continuar navegando necesitara crear un nombre de usuario y una contraseña")
+alert("Binvenido a nuestra tienda online,para continuar navegando necesitara crear un nombre de usuario")
 let nombUsuario = prompt("por favor ingrese su nombre de usuario")
-let passUsuario = prompt("por favor ingrese su contraseña,(tenga en cuenta que el sitio web distingue entre mayusculas y minusculas))")
+
+let intentos = 3
+
 function validar (){
-    
-        let valUsuario = prompt("acontinuacion validaremos su nombre de usuario y contraseña,por favor ingreselo nuevamente")
-        let valPass = prompt("ahora por favor ingrese nuevamente su contraseña")
-        if(valUsuario === nombUsuario && valPass === passUsuario){ alert("la validacion se realizo con exito puede continuar por al sitio")
-    }else{ prompt("nombre de usuario y o contraseña incorrectos,intentelo nuevamente")}
-       
+    alert("Bienvenido "+nombUsuario+" ingrese la siguiente contraseña 1234,para poder seguir navegando")
+    let valUsuario =  prompt("por favor ingrese la contraseña")
+  switch(valUsuario){
+    case "1234":
+        alert("validacion exitosa,puede continuar navegando")
+        break;
+    case "":
+        alert("debe ingresar la contraseña que se le a otorgado,presione la tecla F5 para intentarlo de nuevo")
+        break;  
+
+  }
+     
   
    
 }
